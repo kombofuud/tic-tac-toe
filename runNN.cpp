@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include "makeNN.cpp"
+//#include "makeNN.cpp"
 
 std::vector<float> runResNetLossy(std::vector<float>, std::vector<std::vector<std::vector<std::vector<float>>>> );
 std::vector<std::vector<std::vector<float>>> runResNetLossless(std::vector<float>, std::vector<std::vector<std::vector<std::vector<float>>>> );
@@ -12,13 +12,6 @@ std::vector<float> vecAdd(std::vector<float>, std::vector<float>);
 void visualizeVec(std::vector<float>);
 void visualizeNetEval(std::vector<std::vector<std::vector<float>>>);
 
-int main(){
-    auto x = makeResNet({1,1});
-    visualizeNet(x);
-    auto y = runResNetLossless({1}, x);
-    std::cerr << "Output:\n";
-    visualizeNetEval(y);
-}
 
 
 std::vector<float> runResNetLossy(std::vector<float> input, std::vector<std::vector<std::vector<std::vector<float>>>> net){//evaluate the residual network and return the output

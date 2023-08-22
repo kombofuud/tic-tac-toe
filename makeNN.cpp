@@ -13,10 +13,6 @@ void visualizeNet(std::vector<std::vector<std::vector<std::vector<float>>>>);
 std::ranlux48 ranlux48(std::chrono::system_clock::now().time_since_epoch().count());
 std::normal_distribution<float> normalD(0.0, 1.0);
 
-/*int main(){
-    auto x = makeResNet({3,1,4});
-    visualizeNet(x);
-}*/
 
 
 std::vector<std::vector<std::vector<std::vector<float>>>>  makeResNet(std::vector<int> layerSizes){ //Creates a neural network with the specified layer sizes at the end of each residual block.
